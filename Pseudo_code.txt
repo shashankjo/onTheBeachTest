@@ -1,0 +1,10 @@
+# Psuedo code
+
+# Step 1: Start with picking all the keys having hash-value as empty string "".
+# Step 2: Add it to the final output array.
+# Step 3: Delete these keys from the input hash.
+# Step 4: Iteratively pick all the keys whose hash-value exists in final output array.
+# Step 5: Add these keys to the final output array.
+# Step 6: Delete these keys from the input hash.
+# Step 7: Goto step 4. Break if input hash is empty.
+# Step 8: Join the elements of final output array and return it as a String object.
