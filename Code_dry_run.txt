@@ -1,0 +1,22 @@
+# code dry run
+
+Given input hash {"a"=>"", "b"=>"c", "c"=>"f", "d"=>"a", "e"=>"b", "f"=>""}
+
+# In first iteration keys a and f will be picked from input_hash as their hash-value is "" (i.e initial value of final_job_sequence array)
+# now final_job_sequence array will contain ["",a","f"]
+# Delete keys a and f from input hash.
+
+#In second iteration keys c and d will be picked from input_hash as their hash-values exists in ["",a","f"] (i.e elements of final_job_sequence array)
+# now final_job_sequence array will contain ["",a","f","c","d"]
+# Delete keys c and d from input hash.
+
+#In third iteration key b  will be picked from input_hash as its hash-value exists in ["",a","f","c","d"] (i.e elements of final_job_sequence array)
+# now final_job_sequence array will contain ["",a","f","c","d","b"]
+# Delete key b from input hash.
+
+#In the final iteration key e will be picked from input_hash as its hash-value exists in ["",a","f","c","d","b"] (i.e elements of final_job_sequence array)
+# now final_job_sequence array will contain ["",a","f","c","d","b","e"]
+# Delete key e from input hash. Now input hash is empty and "until" loop will break.
+
+#Delete empty char from the final_job_sequence array, join its element to form a String and return to the calling function and store in String object named answer
+# Output :   Final job sequence = afcdbe
